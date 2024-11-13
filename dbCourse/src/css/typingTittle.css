@@ -1,0 +1,33 @@
+.center-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+/* Typing effect */
+.typing-text {
+  font-size: 2.5rem;
+  color: #333;
+  white-space: nowrap; /* Keeps text in one line */
+  overflow: hidden; /* Hides the text initially */
+  border-right: 2px solid; /* Cursor effect */
+  width: 0; /* Hidden width initially */
+  animation: typing 3s steps(30, end), blink-caret 0.75s step-end infinite;
+  animation-fill-mode: forwards;
+}
+
+/* Keyframes for typing */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+/* Keyframes for blinking cursor */
+@keyframes blink-caret {
+  50% { border-color: transparent; }
+}
+
+.typing-text.done{
+  border-right: none;
+}

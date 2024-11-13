@@ -1,0 +1,19 @@
+.navigation-button {
+  position: fixed; /* Keeps the button in a fixed location on the screen */
+  top: 10px;       /* Distance from the top of the page */
+  right: 10px;     /* Distance from the right edge of the page */
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 1000;   /* Ensures it stays above other elements */
+}
+
+.menu-icon {
+  width: 24px; /* Adjust icon size */
+  height: 24px; /* Adjust icon size */
+}
+
+
+.navigation-button:hover .svg-icon{
+  color: #007bff;
+}

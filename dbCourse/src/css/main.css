@@ -1,0 +1,130 @@
+
+@font-family{
+  font-family: "CaudexFont";
+  src: url('../fonts/Caudex/Caudex-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+.login-label{
+  border: 10px;
+}
+
+#root {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-form{
+  height: 290px;
+  width: 250px;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  justify-items: center;
+  background: white;
+  border-radius: 10px;
+}
+.main-text{
+  color:black;
+  font-family: CaudexFont;
+}
+.input-field{
+  border-radius: 7px;
+}
+
+.action-button{
+  padding: 3px 56px;
+  cursor:pointer;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-style: italic;
+  background: black;
+  color: white;
+}
+
+#body{
+  background-image: url('../assets/milad-fakurian-7wUorDiCMSU.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.App > *:not(.modal) {
+  filter: blur(0); /* Default state with no blur */
+  transition: filter 0.5s ease; /* Adjust duration for smooth transition */
+}
+
+.App.blur-background > *:not(.modal) {
+  filter: blur(5px); /* Blurred state */
+}
+
+/* Modal overlay for centering */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  z-index: 1000;
+}
+
+/* Modal content box */
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+  text-align: center;
+  /* Add animation */
+  opacity: 1; /* Initial state for animation */
+  animation: fadeIn 0.5s forwards;
+}
+
+/* Close button for modal */
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+/* Keyframe for fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Styles for the button icon */
+.navigation-button {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.menu-icon {
+  width: 24px;
+  height: 24px;
+}
