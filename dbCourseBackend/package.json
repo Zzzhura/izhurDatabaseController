@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "back-end for the dbCourse",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "rdev": "node ./backend/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,6 +11,7 @@
   "author": "Ivan Zhuravlev",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^5.1.1",
     "body-parser": "^1.20.3",
     "cors": "^2.8.5",
     "express": "^4.21.1"

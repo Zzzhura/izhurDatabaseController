@@ -1,3 +1,4 @@
+import DynamicTableNavigator from "./components/DynamicTableNavigator";
 import LoginForm from "./components/LoginForm";
 import NavigationButton from "./components/NavigationButton";
 import "./css/main.css";
@@ -8,6 +9,8 @@ import { useState } from "react";
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [role, setRole] = useState("");
 
   const toggleModal = () => {
     if (isModalOpen) {
@@ -21,15 +24,22 @@ function App() {
     }
   };
 
+  const handleLogin = (userRole) => {
+    setIsLoggedIn(true);
+    setRole(userRole);
+    setIsModalOpen(false);
+  };
+
   return (
     <div
       className={`App ${isModalOpen && !isClosing ? "blur-background" : ""}`}
     >
-      <div className="center-container">
+      {/* <div className="center-container">
         <h1 className="typing-text">Ivan Zhuravlev database controller</h1>
-      </div>
+      </div> */}
       <NavigationButton onClick={toggleModal} />
       <div className="main-content"></div>
+      <DynamicTableNavigator></DynamicTableNavigator>
       {isModalOpen && (
         <div className="modal">
           <div

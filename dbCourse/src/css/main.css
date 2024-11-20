@@ -7,6 +7,22 @@
 }
 
 
+.alert {
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  color: white;
+  transition: background-color 0.3s ease
+}
+.alert-success {
+  background-color: rgba(76, 175, 80, 0.8);
+}
+.alert-error {
+  background-color: rgba(244, 67, 54, 0.8);
+}
+
+
 
 .login-label{
   border: 10px;
@@ -26,7 +42,7 @@
 }
 
 .login-form{
-  height: 290px;
+  height: 295px;
   width: 250px;
   justify-content: center;
   align-items: center;
@@ -44,7 +60,13 @@
 }
 
 .action-button{
-  padding: 3px 56px;
+  width: 150px;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 4px;
+  align-items: center;
+  justify-content: center;
   cursor:pointer;
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-style: italic;
