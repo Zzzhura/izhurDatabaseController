@@ -1,3 +1,33 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: rgba(0.8);
+}
+
+.header span {
+  font-size: 16px;
+  color: #333;
+}
+
+.logout-button {
+  padding: 5px 10px;
+  font-size: 14px;
+  color: #fff;
+  background-color: #ff5733;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+  background-color: #e04422;
+}
 
 @font-family{
   font-family: "CaudexFont";

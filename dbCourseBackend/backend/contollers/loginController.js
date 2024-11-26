@@ -18,12 +18,13 @@ const loginUser = async (req, res) => {
       password,
       result.rows[0].password_hash
     );
-
+    const role = await result.rows[0].role;
+    
     if (passwordMatch) {
       return res.json({
         success: true,
         message: "Login successful",
-        role: result.rows.role,
+        role: role,
       });
     } else {
       return res

@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import DynamicTable from "./DynamicTable"; // Import the existing DynamicTable component
+import DynamicTable from "./DynamicTable"; // Import the DynamicTable component
 import "../css/DynamicTableNavigator.css"; // Custom styles
 
-const DynamicTableNavigator = () => {
+const DynamicTableNavigator = ({ userRole }) => {
   const [currentTable, setCurrentTable] = useState("auto"); // Default table
 
   return (
@@ -16,10 +16,11 @@ const DynamicTableNavigator = () => {
       </div>
       <div className="table-display">
         {/* Dynamic table display */}
-        <DynamicTable endpoint={currentTable} />
+        <DynamicTable endpoint={currentTable} userRole={userRole} />
       </div>
     </div>
   );
 };
 
 export default DynamicTableNavigator;
+

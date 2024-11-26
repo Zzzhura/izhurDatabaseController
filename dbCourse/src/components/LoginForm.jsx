@@ -1,15 +1,20 @@
 import "../css/main.css";
 import { useState } from "react";
 
-function LoginForm() {
+function LoginForm({ onLogin }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [alertMessage, setAlertMessage] = useState("");
   const [alertColor, setAlertColor] = useState("");
 
+   
+
   const handleAction = async (action) => {
     try {
-      const url = action === "login" ? "http://localhost:3001/login" : "http://localhost:3001/register";
+      const url =
+        action === "login"
+          ? "http://localhost:3001/login"
+          : "http://localhost:3001/register";
       const response = await fetch(url, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -22,6 +27,7 @@ function LoginForm() {
         setAlertColor("green");
         if (action === "login") {
           console.log("User logged in successfully! Role:", data.role);
+          onLogin(data.role, username);
           // Redirect or perform actions after login here.
         } else {
           console.log("User registered successfully!");
